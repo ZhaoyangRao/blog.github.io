@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mxgraph上手实践 | RaoCy blog</title>
+    <meta name="description" content="我的博客网站">
+    <link rel="icon" href="/blog.github.io/logo.jpg">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.b0d9293e.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.bc234928.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/11.461a49a9.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.cbc3757b.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.2a107d6f.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.ff5a3aba.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.f1b130a7.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.41d2cde4.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.11c97c33.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.5ce521ab.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.f3ac795d.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.f55cb1d8.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.60a9c72f.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.d8b30fd8.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog.github.io/fontbase/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog.github.io/fontup/index/" class="nav-link">前端进阶</a></div><div class="nav-item"><a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></div><div class="nav-item"><a href="/blog.github.io/edit/" class="nav-link">前端开发编辑器</a></div><div class="nav-item"><a href="/blog.github.io/utils/" class="nav-link">前端常用工具函数</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端各种技术try" class="dropdown-title"><span class="title">前端各种技术try</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog.github.io/fontbase/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog.github.io/fontup/index/" class="nav-link">前端进阶</a></div><div class="nav-item"><a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></div><div class="nav-item"><a href="/blog.github.io/edit/" class="nav-link">前端开发编辑器</a></div><div class="nav-item"><a href="/blog.github.io/utils/" class="nav-link">前端常用工具函数</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端各种技术try" class="dropdown-title"><span class="title">前端各种技术try</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>mxgraph上手实践</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/mxgraph/#mxgraph上手实践" class="sidebar-link">mxgraph上手实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#由来" class="sidebar-link">由来</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#判断兼容" class="sidebar-link">判断兼容</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#新建画板，画板相关操作" class="sidebar-link">新建画板，画板相关操作</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#添加节点" class="sidebar-link">添加节点</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#添加连线" class="sidebar-link">添加连线</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#其他功能api" class="sidebar-link">其他功能api</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#常用图形" class="sidebar-link">常用图形</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#查看视图中图形的xml" class="sidebar-link">查看视图中图形的xml</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#读取xml显示在图形中" class="sidebar-link">读取xml显示在图形中</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#style样式的定义" class="sidebar-link">style样式的定义</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#给图中添加事件" class="sidebar-link">给图中添加事件</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#工具栏的常用操作" class="sidebar-link">工具栏的常用操作</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#添加button" class="sidebar-link">添加button</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/mxgraph/#小栗子" class="sidebar-link">小栗子</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mxgraph上手实践"><a href="#mxgraph上手实践" class="header-anchor">#</a> mxgraph上手实践</h2> <h3 id="由来"><a href="#由来" class="header-anchor">#</a> 由来</h3> <p>由于这次项目合作过程中，在流程图绘制的技术选型中，前端选择了mxgraph，所以在边写边学的过程中，对mxgraph的使用作一些简单的记录
+mxgraph的api是全英文的，而且官网有许多的例子，在开发项目的过程没有时间去安安心心的全部阅读，以后慢慢再去消化一遍吧
+我们的需求，前端可以编辑流程图，保存编辑好流程图xml格式到后端，在只显示流程图（不可编辑界面）的界面里读取xml，点击每一个cell触发事件
+去官网下一个mxgraph里面有大量的例子什么的，基本的引入之类的就不说了，主要聊聊基本用法吧</p> <h3 id="判断兼容"><a href="#判断兼容" class="header-anchor">#</a> 判断兼容</h3> <div class="language- extra-class"><pre class="language-text"><code>if (!mxClient.isBrowserSupported()) {
+                // Displays an error message if the browser is not supported.
+                mxUtils.error('Browser is not supported!', 200, false);
+                return
+            }
+</code></pre></div><h3 id="新建画板，画板相关操作"><a href="#新建画板，画板相关操作" class="header-anchor">#</a> 新建画板，画板相关操作</h3> <div class="language- extra-class"><pre class="language-text"><code>            // 构造一个graph，新建画板
+            var container = document.getElementById(&quot;main&quot;);
+            var graph = new mxGraph(container);
+            // i 在图形中创建默认组件 //获取顶层，可以认为是父节点
+            var parent = graph.getDefaultParent();
+</code></pre></div><h3 id="添加节点"><a href="#添加节点" class="header-anchor">#</a> 添加节点</h3> <div class="language- extra-class"><pre class="language-text"><code>            var v1 = graph.insertVertex(parent, null, 'Hello,', 20, 20, 80, 60);
+            var v2 = graph.insertVertex(parent, null, 'World!', 200, 20, 80, 60);
+            var v3 = graph.insertVertex(parent, null, 'World!', 400, 20, 80, 60);
+</code></pre></div><h3 id="添加连线"><a href="#添加连线" class="header-anchor">#</a> 添加连线</h3> <div class="language- extra-class"><pre class="language-text"><code>             var e1 = graph.insertEdge(parent, null, '', v2, v3);
+             
+            //线条拐点
+            e1.geometry.points = [new mxPoint(270, 150)];
+</code></pre></div><h3 id="其他功能api"><a href="#其他功能api" class="header-anchor">#</a> 其他功能api</h3> <div class="language- extra-class"><pre class="language-text"><code>            // 鼠标框选 
+            new mxRubberband(graph);
+            // 开启可以拖拽建立关系,可以连线
+            graph.setConnectable(true);
+            // 开启方块上的文字编辑功能
+            graph.setCellsEditable(true);
+            // 启用对齐线帮助定位
+            mxGraphHandler.prototype.guidesEnabled = true;
+            // 选择基本元素开启
+            graph.setEnabled(true);
+            // 禁用浏览器默认的右键菜单栏
+            mxEvent.disableContextMenu(container);
+            // 只可预览不可选中拖动连接
+            graph.setEnabled(true);
+            // 禁止改变元素大小 
+            graph.setCellsResizable(false);
+            // 容器大小自适应 
+            graph.setResizeContainer(false);
+            // 可否重复连接 
+            graph.setMultigraph(false);
+            // 放大
+            graph.zoomIn();
+            //缩小
+            graph.zoomOut();
+            //还原
+            graph.zoomActual();
+            //居中缩放
+            graph.centerZoom = true;
+</code></pre></div><h3 id="常用图形"><a href="#常用图形" class="header-anchor">#</a> 常用图形</h3> <div class="language- extra-class"><pre class="language-text"><code>        // 画方块 默认情况下
+        graph.insertVertex(parent, null, '矩形', 50, 50, 150, 150);
+        // 画方块 圆角矩形
+        // shape=rounded 定义圆角  arcSize=10 定义圆角弧度
+        graph.insertVertex(parent, null, '圆角矩形', 300, 50, 150, 150, &quot;rounded=true;perimeter=ellipsePerimeter;arcSize=20;&quot;);
+        // 画椭圆
+        // shape=elipse 定义椭圆  perimeter=ellipsePerimeter 让连线的箭头或起点触到边缘
+        graph.insertVertex(parent, null, '椭圆', 550, 50, 150, 150, &quot;shape=ellipse;perimeter=ellipsePerimeter;&quot;);
+        // 画三角形
+        // shape=triangl 定义三角形  perimeter=ellipsePerimeter 让连线的箭头或起点触到边缘 direction=south 让三角形倒立
+        graph.insertVertex(parent, null, '三角形', 800, 50, 150, 150, &quot;shape=triangle;perimeter=ellipsePerimeter;direction=south;&quot;);
+        // 画菱形
+        // shape=rhombus 定义菱形
+        graph.insertVertex(parent, null, '三角形', 1050, 50, 150, 150, &quot;shape=rhombus;perimeter=ellipsePerimeter;&quot;);
+        // 画柱形
+        // shape=cylinder 定义柱形
+        graph.insertVertex(parent, null, '柱形', 1300, 50, 150, 150, &quot;shape=cylinder;perimeter=ellipsePerimeter;&quot;);
+        // 画人
+        // shape=actor 定义演员
+        graph.insertVertex(parent, null, '演员', 50, 300, 150, 150, &quot;shape=actor;perimeter=ellipsePerimeter;&quot;);
+        // 画云
+        graph.insertVertex(parent, null, '云', 300, 300, 150, 150, &quot;shape=cloud;perimeter=ellipsePerimeter;&quot;);
+　　　　　//矩形默认情况下
+        graph.insertVertex(parent, null, '矩形', 550, 300, 150, 150, &quot;shape=rectangle;perimeter=ellipsePerimeter;&quot;);
+　　　　 //泳道
+        graph.insertVertex(parent, null, '泳道', 800, 300, 150, 150, &quot;shape=swimlane;perimeter=ellipsePerimeter;&quot;);
+　　　　  //双圆
+        graph.insertVertex(parent, null, '双圆', 1050, 300, 150, 150, &quot;shape=doubleEllipse;perimeter=ellipsePerimeter;&quot;);
+　　　　 //六边形
+        graph.insertVertex(parent, null, '六边形', 1300, 300, 150, 150, &quot;shape=hexagon;perimeter=ellipsePerimeter;&quot;);
+</code></pre></div><h3 id="查看视图中图形的xml"><a href="#查看视图中图形的xml" class="header-anchor">#</a> 查看视图中图形的xml</h3> <div class="language- extra-class"><pre class="language-text"><code>                var encoder = new mxCodec();
+                var node = encoder.encode(graph.getModel());
+                console.log(node)
+</code></pre></div><h3 id="读取xml显示在图形中"><a href="#读取xml显示在图形中" class="header-anchor">#</a> 读取xml显示在图形中</h3> <div class="language- extra-class"><pre class="language-text"><code>            var xml =''
+            var doc = mxUtils.parseXml(xml);
+            var codec = new mxCodec(doc);  
+            codec.decode(doc.documentElement, graph.getModel());
+</code></pre></div><h3 id="style样式的定义"><a href="#style样式的定义" class="header-anchor">#</a> style样式的定义</h3> <div class="language- extra-class"><pre class="language-text"><code>        // 声明一个object
+        var style = {};
+        // 克隆一个object
+        style = mxUtils.clone(style);
+        style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_LABEL;  // 不设置这个属性 背景图片不出来
+        // 边框颜色
+        style[mxConstants.STYLE_STROKECOLOR] = '#999999';
+        // 边框大小
+        style[mxConstants.STYLE_STROKEWIDTH] = 10;
+        // 字体颜色
+        style[mxConstants.STYLE_FONTCOLOR] = '#FFFF00';
+        // 文字水平方式
+        style[mxConstants.STYLE_ALIGN] = mxConstants.ALIGN_CENTER;
+        // 文字垂直对齐
+        style[mxConstants.STYLE_VERTICAL_ALIGN] = mxConstants.ALIGN_BOTTOM;
+        // 字体大小
+        style[mxConstants.STYLE_FONTSIZE] = 30;
+        // 底图水平对齐
+        style[mxConstants.STYLE_IMAGE_ALIGN] = mxConstants.ALIGN_CENTER;
+        // 底图垂直对齐
+        style[mxConstants.STYLE_IMAGE_VERTICAL_ALIGN] = mxConstants.ALIGN_CENTER;
+        // 图片路径
+        //style[mxConstants.STYLE_IMAGE] = 'images/icons48/gear.png';
+        style[mxConstants.STYLE_IMAGE] = 'http://imgstatic.baidu.com/img/image/shouye/qizhi0822.jpg';
+        // 背景图片宽 
+        style[mxConstants.STYLE_IMAGE_WIDTH] = 150;
+        // 背景图片高
+        style[mxConstants.STYLE_IMAGE_HEIGHT] = 200;
+        // 上间距设置
+        // 即使下边定义了全局设置，但这里单独设置上边间距仍单独有效
+        style[mxConstants.STYLE_SPACING_TOP] = 30;
+        // 四边间距设置
+        style[mxConstants.STYLE_SPACING] = 10;
+        // 把定义好的样式object push到stylesheet
+        graph.getStylesheet().putCellStyle(&quot;style1&quot;, style);
+        //样式使用
+　　     var v1 = graph.insertVertex(parent, null, &quot;text1&quot;, 50, 50, 200, 200, &quot;style1&quot;); 
+</code></pre></div><h3 id="给图中添加事件"><a href="#给图中添加事件" class="header-anchor">#</a> 给图中添加事件</h3> <div class="language- extra-class"><pre class="language-text"><code>   graph.addListener(mxEvent.DOUBLE_CLICK, function (sender, evt) {
+        var cell = evt.getProperty('cell');
+      });
+</code></pre></div><h3 id="工具栏的常用操作"><a href="#工具栏的常用操作" class="header-anchor">#</a> 工具栏的常用操作</h3> <div class="language- extra-class"><pre class="language-text"><code>buttons = [
+            {
+                label : &quot;选择所有&quot;,
+                fun : function(graph){
+                    return function(evt){    
+                        graph.selectAll();    
+                    };
+                }
+            },
+            {
+                label : &quot;选择一个&quot;,
+                fun : function(graph){
+                    return function(evt){    
+                        graph.selectCell();    
+                    };
+                }
+            },
+            {
+                label : &quot;取消选择&quot;,    
+                fun : function(graph){
+                    return function(evt){
+                        var cells = graph.getSelectionCells();    
+                        graph.removeSelectionCells(cells);                            
+                    };
+                }
+            },
+            {
+                label : &quot;随机添加&quot;,    
+                fun : function(graph){
+                    return function(evt){
+                        var randColor = function(){
+                            return &quot;rgb(&quot;+randint(0,255)+&quot;,&quot;+randint(0,255)+&quot;,&quot;+randint(0,255)+&quot;)&quot;;    
+                        };
+                        
+                        var style = &quot;fillColor=&quot; + randColor() + &quot;; fontColor=&quot; + randColor();
+                        var width = randint(50, 300);
+                        var height = randint(50, 300);
+                        var x = randint(0, 1200 - width);
+                        var y = randint(0, 600 - height);
+
+                        graph.insertVertex(graph.getDefaultParent(), null, &quot;随机添加&quot;, x, y, width, height, style);
+                    };    
+                }
+            },
+            {
+                label : &quot;分组所选&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        var cells = graph.getSelectionCells();
+                        graph.groupCells(null, 1, cells);
+                    };
+                }
+            },
+            {
+                label : &quot;取消分组&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        var cells = graph.getSelectionCells();
+                        graph.ungroupCells(cells);
+                    };
+                }
+            },
+            {
+                label : &quot;删除所选&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        var cells = graph.getSelectionCells();
+                        graph.removeCells(cells);
+                    };
+                }
+            },
+            {
+                label : &quot;缩小&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        graph.zoomOut();
+                    };
+                }
+            },
+            {
+                label : &quot;放大&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        graph.zoomIn();
+                    };
+                }
+            },
+            {
+                label : &quot;还原&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        graph.zoomActual();
+                    };
+                }
+            },
+            {
+                label : &quot;随机所选元素的位置&quot;,
+                fun : function(graph){
+                    return function(evt){
+                        var cells = graph.getSelectionCells();
+                        for(var i=0; i&lt;cells.length; i++){
+                            var x = randint(0, 1200 - cells[i].geometry.width);        
+                            var y = randint(0, 600 - cells[i].geometry.height);        
+                        }
+                        graph.moveCells([cells[i]], x , y);                        
+                    };
+                }
+            }
+
+        ]; 
+</code></pre></div><h3 id="添加button"><a href="#添加button" class="header-anchor">#</a> 添加button</h3> <div class="language- extra-class"><pre class="language-text"><code> document.body.appendChild(mxUtils.button('图中显示转化的xml信息', function(evt) {
+                var encoder = new mxCodec();
+                var node = encoder.encode(graph.getModel());
+                console.log(node)
+            }));
+</code></pre></div><h3 id="小栗子"><a href="#小栗子" class="header-anchor">#</a> 小栗子</h3> <h4 id="下面是简单的html小例子，官网还有许多功能，这里只是简单的基本操作"><a href="#下面是简单的html小例子，官网还有许多功能，这里只是简单的基本操作" class="header-anchor">#</a> 下面是简单的html小例子，官网还有许多功能，这里只是简单的基本操作</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;!--
+  Copyright (c) 2006-2018, JGraph Ltd
+  
+  Hello, World! example for mxGraph. This example demonstrates using
+  a DOM node to create a graph and adding vertices and edges.
+--&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Hello, World! example for mxGraph&lt;/title&gt;
+
+    &lt;!-- Sets the basepath for the library if not in same directory --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        mxBasePath = '../src';
+    &lt;/script&gt;
+
+    &lt;!-- Loads and initializes the library --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;../src/js/mxClient.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Example code --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        // Program starts here. Creates a sample graph in the
+        // DOM node with the specified ID. This function is invoked
+        // from the onLoad event handler of the document (see below).
+        function main(container) {
+            // Checks if the browser is supported
+            if (!mxClient.isBrowserSupported()) {
+                // Displays an error message if the browser is not supported.
+                mxUtils.error('Browser is not supported!', 200, false);
+                return
+            }
+
+            // 构造一个graph
+            var graph = new mxGraph(container);
+
+            // 鼠标框选 
+            new mxRubberband(graph);
+            // i 在图形中创建默认组件
+            var parent = graph.getDefaultParent();
+
+            // 添加节点
+            var v1 = graph.insertVertex(parent, null, 'Hello,', 20, 20, 80, 60);
+            var v2 = graph.insertVertex(parent, null, 'World!', 200, 20, 80, 60);
+            var v3 = graph.insertVertex(parent, null, 'World!', 400, 20, 80, 60);
+
+            //连线
+            var e1 = graph.insertEdge(parent, null, '', v2, v3);
+            e1.geometry.points = [new mxPoint(270, 150)];
+            // 开启可以拖拽建立关系,可以连线
+            graph.setConnectable(true);
+            // 开启方块上的文字编辑功能
+            graph.setCellsEditable(true);
+            // 启用对齐线帮助定位
+            mxGraphHandler.prototype.guidesEnabled = true;
+            // 选择基本元素开启
+            graph.setEnabled(true);
+            // 禁用浏览器默认的右键菜单栏
+            mxEvent.disableContextMenu(container);
+            // 只可预览不可选中拖动连接
+            graph.setEnabled(true);
+            // 禁止改变元素大小 
+            graph.setCellsResizable(false);
+            // 容器大小自适应 
+            graph.setResizeContainer(false);
+            // 可否重复连接 
+            graph.setMultigraph(false);
+            // 放大
+            graph.zoomIn();
+            //缩小
+            graph.zoomOut();
+            //还原
+            graph.zoomActual();
+            //居中缩放
+            graph.centerZoom = true;
+            document.body.appendChild(mxUtils.button('图中显示转化的xml信息', function(evt) {
+                var encoder = new mxCodec();
+                var node = encoder.encode(graph.getModel());
+                console.log(node)
+            }));
+            //将图形的xml进行回显
+            //            var xml =''
+            // var doc = mxUtils.parseXml(xml);
+            // var codec = new mxCodec(doc);  
+            // codec.decode(doc.documentElement, graph.getModel());
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;!-- Page passes the container for the graph to the program --&gt;
+
+&lt;body onload=&quot;main(document.getElementById('graphContainer'))&quot;&gt;
+
+    &lt;!-- Creates a container for the graph with a grid wallpaper --&gt;
+    &lt;div id=&quot;graphContainer&quot; style=&quot;position:relative;overflow:hidden;width:100%;height:100%;background:url('editors/images/grid.gif');cursor:default;&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.b0d9293e.js" defer></script><script src="/blog.github.io/assets/js/2.bc234928.js" defer></script><script src="/blog.github.io/assets/js/11.461a49a9.js" defer></script>
+  </body>
+</html>
