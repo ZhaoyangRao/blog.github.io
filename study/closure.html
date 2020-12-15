@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>闭包 | RaoCy|blog</title>
+    <meta name="description" content="我的博客网站">
+    <link rel="icon" href="/blog.github.io/logo.jpg">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.a95d9e81.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.bc234928.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/17.0e462326.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.f185513a.js"><link rel="prefetch" href="/blog.github.io/assets/js/11.461a49a9.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.3385b74f.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.1eba3303.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.967341a4.js"><link rel="prefetch" href="/blog.github.io/assets/js/15.61ccbbee.js"><link rel="prefetch" href="/blog.github.io/assets/js/16.c7304e10.js"><link rel="prefetch" href="/blog.github.io/assets/js/18.54fe0b4a.js"><link rel="prefetch" href="/blog.github.io/assets/js/19.2a2d3cb7.js"><link rel="prefetch" href="/blog.github.io/assets/js/20.bc10d2df.js"><link rel="prefetch" href="/blog.github.io/assets/js/21.cb713235.js"><link rel="prefetch" href="/blog.github.io/assets/js/22.585b5ad6.js"><link rel="prefetch" href="/blog.github.io/assets/js/23.e92d389b.js"><link rel="prefetch" href="/blog.github.io/assets/js/24.82e6f6ad.js"><link rel="prefetch" href="/blog.github.io/assets/js/25.47b6bb09.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.9603af92.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.11c97c33.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.5ce521ab.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.b6c0e06e.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.f55cb1d8.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.60a9c72f.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.f412e904.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy|blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog.github.io/fontbase/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog.github.io/fontup/index/" class="nav-link">前端进阶</a></div><div class="nav-item"><a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/utils/" class="nav-link">常用工具函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/edit/" class="nav-link">前端常用开发工具</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog.github.io/fontbase/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog.github.io/fontup/index/" class="nav-link">前端进阶</a></div><div class="nav-item"><a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/utils/" class="nav-link">常用工具函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/edit/" class="nav-link">前端常用开发工具</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>闭包</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/study/closure.html#闭包" class="sidebar-link">闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/study/closure.html#词法分析" class="sidebar-link">词法分析</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/closure.html#词法作用域" class="sidebar-link">词法作用域</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/closure.html#闭包-2" class="sidebar-link">闭包</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="闭包"><a href="#闭包" class="header-anchor">#</a> 闭包</h2> <p>了解js的闭包之前，先要了解js的词法作用域</p> <h3 id="词法分析"><a href="#词法分析" class="header-anchor">#</a> 词法分析</h3> <p>讲词法作用域之前先看一段代码的输出结果</p> <div class="language- extra-class"><pre class="language-text"><code>var tt = 'aa';
+function test(){
+alert(tt);
+var tt = 'dd';
+alert(tt);
+}
+test();
+
+太简单了，晃一眼以为结果脱口而出 aa dd 
+然而实际结果是undefined和dd
+
+上面的代码js的执行其实是
+
+var tt;
+tt='aa';
+function test(){
+var tt;
+alert(tt);
+tt = 'dd';
+alert(tt);
+}
+test();
+</code></pre></div><p>很明显变量提升了,变量提升的原因就在于词法分析
+js在执行函数的时候有一个类似编译的过程，也就是词法分析，词法分析会做三件事</p> <ul><li>分析参数</li> <li>分析变量声明</li> <li>分析函数声明
+词法分析其实最主要的也是最容易出错的就是变量提升和函数提升。</li></ul> <h4 id="变量提升"><a href="#变量提升" class="header-anchor">#</a> 变量提升</h4> <p>变量提升简单的说就是把变量提升到它所在作用域的最前面，也就是最开始的位置</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(c);   //undefined
+var c = &quot;1&quot;;
+console.log(c);   //1
+function fn(){
+    console.log(d); //undefined
+    var d = '2';
+    console.log(d); //2
+}
+fn();
+
+等价于
+var c;
+console.log(c); 
+c='1';
+function fn(){
+    var d;
+    console.log(d);
+    d='2';
+    console.log(d)
+}
+fn();
+
+</code></pre></div><h4 id="函数提升"><a href="#函数提升" class="header-anchor">#</a> 函数提升</h4> <p>其实函数提升也是变量提升的一种，顾名思义主要是函数的提升，只有函数声明才有提升</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(a)  // f a() { console.log(a) }
+console.log(b) //undefined
+
+//函数声明
+function a() {
+    console.log(a) 
+} 
+//函数表达式（函数字面量）
+var b = function(){
+    console.log(b)
+}
+
+等价于
+
+function a(){
+    console.log(a)
+}
+var b;
+console.log(a)
+console.log(b)
+b=function（）{
+}
+</code></pre></div><p>可以看见，函数声明的方式，函数提升到了最前面。而函数字面量并没有把函数提升到前面，只是把变量提升了</p> <h4 id="变量提升与函数提升"><a href="#变量提升与函数提升" class="header-anchor">#</a> 变量提升与函数提升</h4> <div class="language- extra-class"><pre class="language-text"><code>console.log(a) //function a(){}
+var a=1;
+function a(){}
+console.log(a) //1
+等价于
+function a(){}
+var a;
+console.log(a)
+a=1
+console.log(a)
+</code></pre></div><p>从上面可以看出，函数提升优于变量提升</p> <h3 id="词法作用域"><a href="#词法作用域" class="header-anchor">#</a> 词法作用域</h3> <h4 id="作用域"><a href="#作用域" class="header-anchor">#</a> 作用域</h4> <p>简单的说，作用域，就是能够发挥作用的区域，官方的话是在JavaScript中,作用域为可访问变量，对象，函数的集合
+作用域分为</p> <ul><li>局部作用域</li> <li>全局作用域</li> <li>块级作用域
+对应的变量也分为</li> <li>全局变量</li> <li>局部变量</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function a(){
+    var a1=123      //局部变量  相应的这块{ }就是局部作用域
+}
+
+————————————————————
+var a1=12;          //全局变量  相应的最外层这块就是全局作用域了         
+function a(){    
+}
+
+特殊的
+
+functio b(){
+    b1=123          //可以看出b1并没有声明，这种js并不会报错，词法分析解析这块的时候会自动在全局var b，强烈不建议此骚操作
+}                   
+等价于
+var b1;
+function b(){
+    b1=123   
+}
+</code></pre></div><p>全局变量与局部变量除了作用域的区别外，还有就是销毁时机的区别。
+全局变量，声明在全局，除非全局被销毁了，例如页面关掉等清空，或者它的生命周期一直在。
+局部变量，执行时初始化，执行完函数，就会被销毁，不调用的时候，它就没有任何作用，没用的东西要它何用，有点过河拆桥的意思了。</p> <p>块级作用域
+为什么单独拿出来讲呢，这是es6新增加的一个概念</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    let a = 1;
+    console.log(a); // 1
+}
+    console.log(a); // 报错 a is not defined
+或者
+{
+    const a = 1;
+    console.log(a); // 1
+}
+    console.log(a); // 报错 a is not defined
+这就是典型的块级作用域
+
+再看这个，为什么var没有报错
+{
+    var a = 1;
+    console.log(a); // 1
+}
+    console.log(a); // 1
+</code></pre></div><p>从上面我们可以看出“块级作用域”</p> <ul><li>块级作用域是在{ }里面体现，包括if(){}  for(){}</li> <li>let const声明的变量才有块级的概念 ，var没有块级作用域的概念</li></ul> <h4 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h4> <p>简单的理解，在执行函数的时候，总是先在函数内部找变量，找不到就往上一级找，直到在全局找，依次往外，这就形成了类似链式的结构</p> <div class="language- extra-class"><pre class="language-text"><code>var d= 123
+function a(){
+    b()
+    function b(){
+        c()
+        function c(){
+            console.log(d)
+        }
+    }
+}
+a()
+这就是典型的链式,a执行代码，b执行代码，c执行代码，c找变量，找不到=&gt;去b找，找不到=&gt;去a找，找不到=&gt;去全局找
+</code></pre></div><h4 id="词法作用域-2"><a href="#词法作用域-2" class="header-anchor">#</a> 词法作用域</h4> <p>那什么叫做词法作用域呢
+词法作用域更强调的是不执行代码，这个作用域已经被你的代码确定下来了，取决于你的代码，不用执行就能分析出来，所以又叫做静态作用域</p> <h3 id="闭包-2"><a href="#闭包-2" class="header-anchor">#</a> 闭包</h3> <p>其实我也看了很多关于闭包的文档或者博客，感觉很多人都说的很晦涩，然后举出一大堆很难理解的函数例子，我觉得没有哪个必要，不能为了闭包而闭包吧，正常人也不会写那么难维护的代码</p> <div class="language- extra-class"><pre class="language-text"><code>function a(){
+    var av=1;
+    function b(){
+        console.log(av)  //1
+    }
+}
+从上面的代码示例就可以看出来，b是能访问到变量av的，所以b函数就是一个闭包，这是最简单的闭包吧
+
+</code></pre></div><p>闭包就是能够读取其他函数内部变量的函数。例如在javascript中，只有函数内部的子函数才能读取局部变量，所以闭包可以理解成“定义在一个函数内部的函数“。在本质上，闭包是将函数内部和函数外部连接起来的桥梁。
+上面就是闭包的官方定义，结合例子一看，应该一下就明白了，简单的说就是能读到其他函数内部的变量的函数就是闭包。</p> <h4 id="闭包的使用"><a href="#闭包的使用" class="header-anchor">#</a> 闭包的使用</h4> <p>我们了解了闭包的概念，但闭包在工作中的使用，更多的是利用它能访问函数内部变量的机制，把那个变量给return出来，所以你看到很多闭包函数有大量的return</p> <div class="language- extra-class"><pre class="language-text"><code>function a(){
+    var av=1;
+    function b(){
+        console.log(av)
+    }
+    return b
+}
+console.log(a());  //function b(){console.log(av)}
+a()();   // 1
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.a95d9e81.js" defer></script><script src="/blog.github.io/assets/js/2.bc234928.js" defer></script><script src="/blog.github.io/assets/js/17.0e462326.js" defer></script>
+  </body>
+</html>
