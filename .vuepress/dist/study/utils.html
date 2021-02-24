@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用封装工具函数 | RaoCy</title>
+    <meta name="description" content="欢迎来到RaoCy博客">
+    <link rel="icon" href="/blog.github.io/images/logo.png">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.3448b736.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.08fb6a77.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/34.525f1fe9.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.d18d338d.js"><link rel="prefetch" href="/blog.github.io/assets/js/11.8e029bb3.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.503871bf.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.85cbfb3b.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.612e31b7.js"><link rel="prefetch" href="/blog.github.io/assets/js/15.771fa0fa.js"><link rel="prefetch" href="/blog.github.io/assets/js/16.f0c9b1a8.js"><link rel="prefetch" href="/blog.github.io/assets/js/17.03cb6c75.js"><link rel="prefetch" href="/blog.github.io/assets/js/18.30e47f41.js"><link rel="prefetch" href="/blog.github.io/assets/js/19.743d9fe2.js"><link rel="prefetch" href="/blog.github.io/assets/js/20.f94a7f1f.js"><link rel="prefetch" href="/blog.github.io/assets/js/21.d75e11ba.js"><link rel="prefetch" href="/blog.github.io/assets/js/22.e93b0ec6.js"><link rel="prefetch" href="/blog.github.io/assets/js/23.aa7a8461.js"><link rel="prefetch" href="/blog.github.io/assets/js/24.625ac98a.js"><link rel="prefetch" href="/blog.github.io/assets/js/25.08111efc.js"><link rel="prefetch" href="/blog.github.io/assets/js/26.1156d385.js"><link rel="prefetch" href="/blog.github.io/assets/js/27.85314d56.js"><link rel="prefetch" href="/blog.github.io/assets/js/28.da643af3.js"><link rel="prefetch" href="/blog.github.io/assets/js/29.863b5a3d.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.5045f36e.js"><link rel="prefetch" href="/blog.github.io/assets/js/30.b187070b.js"><link rel="prefetch" href="/blog.github.io/assets/js/31.f2411ca3.js"><link rel="prefetch" href="/blog.github.io/assets/js/32.cf583eef.js"><link rel="prefetch" href="/blog.github.io/assets/js/33.a6c7ee11.js"><link rel="prefetch" href="/blog.github.io/assets/js/35.76a6d4c4.js"><link rel="prefetch" href="/blog.github.io/assets/js/36.94425a98.js"><link rel="prefetch" href="/blog.github.io/assets/js/37.81a52c7a.js"><link rel="prefetch" href="/blog.github.io/assets/js/38.035109da.js"><link rel="prefetch" href="/blog.github.io/assets/js/39.5de03b27.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.9c05fb97.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.f58cad38.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.80304e82.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.a1080829.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.c69d194c.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.6691e078.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>常用封装工具函数</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/study/utils.html#常用封装工具函数" class="sidebar-link">常用封装工具函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#树状数据结构" class="sidebar-link">树状数据结构</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#保留n位小数" class="sidebar-link">保留n位小数</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#判断是否是-null-undefined" class="sidebar-link">判断是否是 null, '', undefined</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#设置-本地缓存" class="sidebar-link">设置 本地缓存</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#深拷贝，支持常见类型" class="sidebar-link">深拷贝，支持常见类型</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#获取操作系统类型" class="sidebar-link">获取操作系统类型</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#获取浏览器类型和版本" class="sidebar-link">获取浏览器类型和版本</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#url参数转对象" class="sidebar-link">url参数转对象</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#随机生成颜色" class="sidebar-link">随机生成颜色</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#生成指定范围随机数" class="sidebar-link">生成指定范围随机数</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#格式化时间" class="sidebar-link">格式化时间</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/utils.html#获取当前时间" class="sidebar-link">获取当前时间</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="常用封装工具函数"><a href="#常用封装工具函数" class="header-anchor">#</a> 常用封装工具函数</h2> <h3 id="树状数据结构"><a href="#树状数据结构" class="header-anchor">#</a> 树状数据结构</h3> <div class="language- extra-class"><pre class="language-text"><code> // 使用示例代码：
+list: [{id: 1, pid: 0, name: 11}, {id: 2, pid: 1, name: 2}]
+getTreeArr({ key: 'id', pKey: 'pid', data: list })
+result: [
+    {id: 1, pid: 0, name: 11, children: [
+        {id: 2, pid: 1, name: 2}
+    ]}
+]
+ */
+/**
+ * 将一级的数据结构处理成树状数据结构
+ * @param {Object} obj {key, pKey, data}
+ *  @param obj.key  字段名称 比如id
+ *  @param obj.pKey 父字段名称 比如 pid
+ *  @param obj.rootPValue 根节点的父字段的值
+ *  @param obj.data 需要处理的数据
+ *  @param obj.jsonData 是否深复制数据（默认是true）
+ * @return {Array} arr
+   */
+ function getTreeArr(obj) {
+    if (!Array.isArray(obj.data)) {
+      console.log('getTreeArr=&gt;请传入数组')
+      return []
+    }
+    obj.jsonData = obj.jsonData === false ? obj.jsonData : true
+    const arr = obj.jsonData ? JSON.parse(JSON.stringify(obj.data)) : obj.data
+    const arr1 = []
+    // 将数据处理成数状结构
+    arr.forEach(item =&gt; {
+      let index = 0
+      item.children = []
+      arr.forEach(item1 =&gt; {
+        // 得到树结构关系
+        if (item[obj.key] === item1[obj.pKey]) {
+          item.children.push(item1)
+        }
+        // 判断根节点
+        if (item1[obj.key] !== item[obj.pKey]) {
+          index++
+        }
+      })
+      // 没传入根节点，根据当前数据结构得到根节点
+      if (!('rootPValue' in obj) &amp;&amp; index === arr.length) {
+        arr1.push(item)
+      }
+    })
+    // 传入根节点，根据传入的根节点组成树结构
+    if ('rootPValue' in obj) {
+      arr.forEach(item =&gt; {
+        if (item[obj.pKey] === obj.rootPValue) {
+          arr1.push(item)
+        }
+      })
+    }
+    return arr1
+  }
+</code></pre></div><h3 id="保留n位小数"><a href="#保留n位小数" class="header-anchor">#</a> 保留n位小数</h3> <div class="language- extra-class"><pre class="language-text"><code>function toFixed(val, num) {
+    val = parseFloat(val);
+    if (val) {
+        val = parseFloat(val.toFixed(num || 1));
+    } else {
+        val = 0;
+    }
+    return val;
+}
+</code></pre></div><h3 id="判断是否是-null-undefined"><a href="#判断是否是-null-undefined" class="header-anchor">#</a> 判断是否是 null, '', undefined</h3> <div class="language- extra-class"><pre class="language-text"><code>function isNot(val) {
+    if (val === null || val === '' || val === undefined) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+</code></pre></div><h3 id="设置-本地缓存"><a href="#设置-本地缓存" class="header-anchor">#</a> 设置 本地缓存</h3> <div class="language- extra-class"><pre class="language-text"><code>function setStorage(key, obj) {
+   if (typeof obj === 'string') {
+       localStorage.setItem(key, obj);
+   } else {
+       localStorage.setItem(key, JSON.stringify(obj));
+   }
+}
+
+/**
+* 获取
+*/
+function getStorage(key) {
+   let val = localStorage.getItem(key);
+   try {
+       return JSON.parse(val);
+   } catch (e) {
+       return val;
+   }
+}
+
+/**
+* 删除， 如果不传值，删除所有
+*/
+function clearStorage(key) {
+   if (key) {
+       localStorage.removeItem(key);
+   } else {
+       localStorage.clear();
+   }
+}
+</code></pre></div><h3 id="深拷贝，支持常见类型"><a href="#深拷贝，支持常见类型" class="header-anchor">#</a> 深拷贝，支持常见类型</h3> <ul><li>@param {Any} values</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function deepClone(values) {
+    var copy;
+
+    // Handle the 3 simple types, and null or undefined
+    if (null == values || &quot;object&quot; != typeof values) return values;
+
+    // Handle Date
+    if (values instanceof Date) {
+        copy = new Date();
+        copy.setTime(values.getTime());
+        return copy;
+    }
+
+    // Handle Array
+    if (values instanceof Array) {
+        copy = [];
+        for (var i = 0, len = values.length; i &lt; len; i++) {
+            copy[i] = deepClone(values[i]);
+        }
+        return copy;
+    }
+
+    // Handle Object
+    if (values instanceof Object) {
+        copy = {};
+        for (var attr in values) {
+            if (values.hasOwnProperty(attr)) copy[attr] = deepClone(values[attr]);
+        }
+        return copy;
+    }
+
+    throw new Error(&quot;Unable to copy values! Its type isn't supported.&quot;);
+}
+</code></pre></div><h3 id="获取操作系统类型"><a href="#获取操作系统类型" class="header-anchor">#</a> 获取操作系统类型</h3> <ul><li>@return {String}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function getOS() {
+    var userAgent = 'navigator' in window &amp;&amp; 'userAgent' in navigator &amp;&amp; navigator.userAgent.toLowerCase() || '';
+    var vendor = 'navigator' in window &amp;&amp; 'vendor' in navigator &amp;&amp; navigator.vendor.toLowerCase() || '';
+    var appVersion = 'navigator' in window &amp;&amp; 'appVersion' in navigator &amp;&amp; navigator.appVersion.toLowerCase() || '';
+
+    if (/mac/i.test(appVersion)) return 'MacOSX'
+    if (/win/i.test(appVersion)) return 'windows'
+    if (/linux/i.test(appVersion)) return 'linux'
+    if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) 'ios'
+    if (/android/i.test(userAgent)) return 'android'
+    if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return 'windowsPhone'
+}
+</code></pre></div><h3 id="获取浏览器类型和版本"><a href="#获取浏览器类型和版本" class="header-anchor">#</a> 获取浏览器类型和版本</h3> <ul><li>@return {String}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function getExplore() {
+    var sys = {},
+        ua = navigator.userAgent.toLowerCase(),
+        s;
+    (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1]:
+        (s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] :
+        (s = ua.match(/edge\/([\d\.]+)/)) ? sys.edge = s[1] :
+        (s = ua.match(/firefox\/([\d\.]+)/)) ? sys.firefox = s[1] :
+        (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? sys.opera = s[1] :
+        (s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] :
+        (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0;
+    // 根据关系进行判断
+    if (sys.ie) return ('IE: ' + sys.ie)
+    if (sys.edge) return ('EDGE: ' + sys.edge)
+    if (sys.firefox) return ('Firefox: ' + sys.firefox)
+    if (sys.chrome) return ('Chrome: ' + sys.chrome)
+    if (sys.opera) return ('Opera: ' + sys.opera)
+    if (sys.safari) return ('Safari: ' + sys.safari)
+    return 'Unkonwn'
+}
+</code></pre></div><h3 id="url参数转对象"><a href="#url参数转对象" class="header-anchor">#</a> url参数转对象</h3> <ul><li>@param  {String} url  default: window.location.href</li> <li>@return {Object}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function parseQueryString(url) {
+    url = url == null ? window.location.href : url
+    var search = url.substring(url.lastIndexOf('?') + 1)
+    if (!search) {
+        return {}
+    }
+    return JSON.parse('{&quot;' + decodeURIComponent(search).replace(/&quot;/g, '\\&quot;').replace(/&amp;/g, '&quot;,&quot;').replace(/=/g, '&quot;:&quot;') + '&quot;}')
+}
+</code></pre></div><h3 id="随机生成颜色"><a href="#随机生成颜色" class="header-anchor">#</a> 随机生成颜色</h3> <ul><li>@return {String}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function randomColor() {
+    return '#' + ('00000' + (Math.random() * 0x1000000 &lt;&lt; 0).toString(16)).slice(-6);
+}
+</code></pre></div><h3 id="生成指定范围随机数"><a href="#生成指定范围随机数" class="header-anchor">#</a> 生成指定范围随机数</h3> <ul><li>@param  {Number} min</li> <li>@param  {Number} max</li> <li>@return {Number}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function randomNum(min, max) {
+    return Math.floor(min + Math.random() * (max - min));
+}
+</code></pre></div><h3 id="格式化时间"><a href="#格式化时间" class="header-anchor">#</a> 格式化时间</h3> <div class="language- extra-class"><pre class="language-text"><code>function formatDate(date) {
+    date = new Date(date);
+    var y = date.getFullYear();
+    var m = date.getMonth() + 1;
+    var d = date.getDate();
+    var h = date.getHours();
+    var m1 = date.getMinutes();
+    var s = date.getSeconds();
+    m = m &lt; 10 ? (&quot;0&quot; + m) : m;
+    d = d &lt; 10 ? (&quot;0&quot; + d) : d;
+    return y + &quot;-&quot; + m + &quot;-&quot; + d + &quot; &quot; + h + &quot;:&quot; + m1 + &quot;:&quot; + s;
+}
+</code></pre></div><h3 id="获取当前时间"><a href="#获取当前时间" class="header-anchor">#</a> 获取当前时间</h3> <div class="language- extra-class"><pre class="language-text"><code>function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = '/';
+    var seperator2 = ':';
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month &gt;= 1 &amp;&amp; month &lt;= 9) {
+        month = '0' + month;
+    }
+    if (strDate &gt;= 0 &amp;&amp; strDate &lt;= 9) {
+        strDate = '0' + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate +
+        &quot; &quot; + date.getHours() + seperator2 + date.getMinutes() +
+        seperator2 + date.getSeconds();
+    return currentdate;
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.3448b736.js" defer></script><script src="/blog.github.io/assets/js/2.08fb6a77.js" defer></script><script src="/blog.github.io/assets/js/34.525f1fe9.js" defer></script>
+  </body>
+</html>

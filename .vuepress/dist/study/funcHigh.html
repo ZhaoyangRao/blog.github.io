@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>高阶函数 | RaoCy</title>
+    <meta name="description" content="欢迎来到RaoCy博客">
+    <link rel="icon" href="/blog.github.io/images/logo.png">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.3448b736.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.08fb6a77.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/27.85314d56.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.d18d338d.js"><link rel="prefetch" href="/blog.github.io/assets/js/11.8e029bb3.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.503871bf.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.85cbfb3b.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.612e31b7.js"><link rel="prefetch" href="/blog.github.io/assets/js/15.771fa0fa.js"><link rel="prefetch" href="/blog.github.io/assets/js/16.f0c9b1a8.js"><link rel="prefetch" href="/blog.github.io/assets/js/17.03cb6c75.js"><link rel="prefetch" href="/blog.github.io/assets/js/18.30e47f41.js"><link rel="prefetch" href="/blog.github.io/assets/js/19.743d9fe2.js"><link rel="prefetch" href="/blog.github.io/assets/js/20.f94a7f1f.js"><link rel="prefetch" href="/blog.github.io/assets/js/21.d75e11ba.js"><link rel="prefetch" href="/blog.github.io/assets/js/22.e93b0ec6.js"><link rel="prefetch" href="/blog.github.io/assets/js/23.aa7a8461.js"><link rel="prefetch" href="/blog.github.io/assets/js/24.625ac98a.js"><link rel="prefetch" href="/blog.github.io/assets/js/25.08111efc.js"><link rel="prefetch" href="/blog.github.io/assets/js/26.1156d385.js"><link rel="prefetch" href="/blog.github.io/assets/js/28.da643af3.js"><link rel="prefetch" href="/blog.github.io/assets/js/29.863b5a3d.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.5045f36e.js"><link rel="prefetch" href="/blog.github.io/assets/js/30.b187070b.js"><link rel="prefetch" href="/blog.github.io/assets/js/31.f2411ca3.js"><link rel="prefetch" href="/blog.github.io/assets/js/32.cf583eef.js"><link rel="prefetch" href="/blog.github.io/assets/js/33.a6c7ee11.js"><link rel="prefetch" href="/blog.github.io/assets/js/34.525f1fe9.js"><link rel="prefetch" href="/blog.github.io/assets/js/35.76a6d4c4.js"><link rel="prefetch" href="/blog.github.io/assets/js/36.94425a98.js"><link rel="prefetch" href="/blog.github.io/assets/js/37.81a52c7a.js"><link rel="prefetch" href="/blog.github.io/assets/js/38.035109da.js"><link rel="prefetch" href="/blog.github.io/assets/js/39.5de03b27.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.9c05fb97.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.f58cad38.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.80304e82.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.a1080829.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.c69d194c.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.6691e078.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>高阶函数</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/study/funcHigh.html#高阶函数" class="sidebar-link">高阶函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog.github.io/study/funcHigh.html#js自提供的几个高阶函数" class="sidebar-link">js自提供的几个高阶函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#map" class="sidebar-link">map</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#reduce" class="sidebar-link">reduce</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#filter" class="sidebar-link">filter</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#sort" class="sidebar-link">sort</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#every" class="sidebar-link">every</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/funcHigh.html#some" class="sidebar-link">some</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="高阶函数"><a href="#高阶函数" class="header-anchor">#</a> 高阶函数</h2> <p>一个函数接收另外一个函数作为参数，这个函数就叫高阶函数</p> <div class="language- extra-class"><pre class="language-text"><code>function a(x){
+    return x
+}
+
+function b(x,f){
+    return f(x)
+}
+
+b(1,a)     // 1  这个b就是一个典型的高阶函数，它接收一个函数作为参数，这里把a函数传给它了
+
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">总结</p> <p>所谓函数引用、对象引用、函数名其实都是内存中的一个地址，这个地址指向了某个函数或对象或方法，谁拿到了这个地址，谁就拥有了调用函数、调用方法的权利，所以所谓传入函数作为参数，其实就是把这个地址传给了另外一个函数，让另外一个函数拥有操作这个函数的权利.</p></div> <h2 id="js自提供的几个高阶函数"><a href="#js自提供的几个高阶函数" class="header-anchor">#</a> js自提供的几个高阶函数</h2> <p>其实你可能一直在使用高阶函数，只是你不知道它是高阶函数</p> <h3 id="map"><a href="#map" class="header-anchor">#</a> map</h3> <ul><li>callback
+<ul><li>element  也就是集合中的每一个item</li> <li>index 位置</li> <li>self  传入的集合</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>function a(x) {
+    return x * x;
+}
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var results = arr.map(a);  
+console.log(results); // [1, 4, 9, 16, 25, 36, 49, 64, 81] 
+
+这不就等价于,可能你平时更多就下面这样玩
+
+var results = arr.map(item=&gt;{
+    return item=item*item
+}); 
+
+——————————————————————————
+还有更简单的一些技巧用法
+arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9'] 
+</code></pre></div><h3 id="reduce"><a href="#reduce" class="header-anchor">#</a> reduce</h3> <p>又叫累加器，一版用作累加，最主要的也是previousValue这个callback里面的参数</p> <ul><li>callback （执行数组中每个值的函数，包含四个参数）
+<ul><li>previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））</li> <li>currentValue （数组中当前被处理的元素）</li> <li>index （当前元素在数组中的索引）</li> <li>array （调用 reduce 的数组）</li></ul></li> <li>initialValue （作为第一次调用 callback 的第一个参数。）</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [1, 2, 3];
+var results = arr.reduce((prev, cur)=&gt;{
+    console.log(prev, cur)
+    return prev=prev+cur
+})
+console.log(results) //6
+
+————————————————————
+initialValue的用法，类似于累加之前的一个初始值
+var arr = [1, 2, 3];
+var results = arr.reduce((prev, cur)=&gt;{
+    console.log(prev, cur)
+    return prev=prev+cur
+},2)
+console.log(results) // 8
+
+</code></pre></div><h3 id="filter"><a href="#filter" class="header-anchor">#</a> filter</h3> <p>又叫过滤器，用于筛选，返回过滤后的数据</p> <ul><li>callback
+<ul><li>element  也就是集合中的每一个item</li> <li>index 位置</li> <li>self  传入的集合</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [1, 2, 3];
+var results=arr.filter(item=&gt;{
+    return item&gt;2
+})
+console.log(results) //[3]
+
+</code></pre></div><h3 id="sort"><a href="#sort" class="header-anchor">#</a> sort</h3> <p>排序，需要注意的是sort方法会默认把元素转换为String再排序，直接对数字排，绝对掉坑里</p> <div class="language- extra-class"><pre class="language-text"><code>let arr=[1,2,10,3]
+console.log(arr.sort())  //[1, 10, 2, 3] 
+</code></pre></div><p>上面的例子可不是你想要的结果,所以我们需要自己提供一个比较函数传给sort</p> <div class="language- extra-class"><pre class="language-text"><code>let arr=[1,2,10,3]
+let r=arr.sort((a,b)=&gt;{
+console.log(a,b)
+return a-b
+})
+console.log(r)   //[1,2,3,10]
+___________________
+let arr=[1,2,10,3]
+let r=arr.sort((a,b)=&gt;{
+console.log(a,b)
+return b-a
+})
+console.log(r)   //[10,3,2,1]
+
+</code></pre></div><p>上面的正序倒序一下就排序完成了，但是如果对sort内部机制不明白，这个a和b到底是啥？<br>
+通过console其实你大致都能看出来了<br>
+sort中的那个函数就叫做比较函数，该函数比较a和b两个值，return一个用来说明a,b相对顺序的数字。<br></p> <ul><li>a-b&gt;0  所以b相对再a前面</li> <li>a-b=0  ab相对位置不会变</li> <li>a-b&lt;0  a相对在b前面
+<br>sort函数就是不断的对相邻两个值不断对比，记录位置，不断调整顺序，根据两个值相减返回的值与0对比确认两个值的相对位置。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>按照数组中对象的某一个属性值进行排序
+
+var arr = [
+    {name:'zopp',age:0},
+    {name:'gpp',age:18},
+    {name:'yjj',age:8}
+];
+
+let r=arr.sort((a,b)=&gt;{
+    return a.age-b.age
+})
+console.log(r)  //[{name:'zopp',age:0},{name:'yjj',age:8},{name:'gpp',age:18}]
+
+我们知道sort是根据return计算的值跟0相比来确定相邻两个值的相对位置，所以只要这个值我们随机生成，不就实现了乱排吗
+
+let arr=[1,2,10,3]
+let r=arr.sort(function(a,b){
+    return Math.random() - 0.5;
+})
+console.log(r)  //乱序
+</code></pre></div><h3 id="every"><a href="#every" class="header-anchor">#</a> every</h3> <p>用来检测是不是数组中每一个元素都符合条件,返回一个布尔值</p> <div class="language- extra-class"><pre class="language-text"><code>let arr=[1,2,10,3]
+let r=arr.every(item=&gt;{
+    return item&gt;2
+})
+console.log(r)  //false
+</code></pre></div><h3 id="some"><a href="#some" class="header-anchor">#</a> some</h3> <p>只要数组中有一个满足条件，就返回布尔值，跟every刚好对应</p> <div class="language- extra-class"><pre class="language-text"><code>let arr=[1,2,10,3]
+let r=arr.some(item=&gt;{
+    return item&gt;2
+})
+console.log(r)  //true
+</code></pre></div><p>其实还有很多高阶函数，只要能传个函数给他的就是高阶函数，数组里面提供的高阶函数多了去了，例如find,findIndex,forEach等等，这里只是举几个典型的例子</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.3448b736.js" defer></script><script src="/blog.github.io/assets/js/2.08fb6a77.js" defer></script><script src="/blog.github.io/assets/js/27.85314d56.js" defer></script>
+  </body>
+</html>

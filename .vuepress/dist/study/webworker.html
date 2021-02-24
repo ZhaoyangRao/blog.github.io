@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web Worker | RaoCy</title>
+    <meta name="description" content="欢迎来到RaoCy博客">
+    <link rel="icon" href="/blog.github.io/images/logo.png">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.3448b736.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.08fb6a77.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/35.76a6d4c4.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.d18d338d.js"><link rel="prefetch" href="/blog.github.io/assets/js/11.8e029bb3.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.503871bf.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.85cbfb3b.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.612e31b7.js"><link rel="prefetch" href="/blog.github.io/assets/js/15.771fa0fa.js"><link rel="prefetch" href="/blog.github.io/assets/js/16.f0c9b1a8.js"><link rel="prefetch" href="/blog.github.io/assets/js/17.03cb6c75.js"><link rel="prefetch" href="/blog.github.io/assets/js/18.30e47f41.js"><link rel="prefetch" href="/blog.github.io/assets/js/19.743d9fe2.js"><link rel="prefetch" href="/blog.github.io/assets/js/20.f94a7f1f.js"><link rel="prefetch" href="/blog.github.io/assets/js/21.d75e11ba.js"><link rel="prefetch" href="/blog.github.io/assets/js/22.e93b0ec6.js"><link rel="prefetch" href="/blog.github.io/assets/js/23.aa7a8461.js"><link rel="prefetch" href="/blog.github.io/assets/js/24.625ac98a.js"><link rel="prefetch" href="/blog.github.io/assets/js/25.08111efc.js"><link rel="prefetch" href="/blog.github.io/assets/js/26.1156d385.js"><link rel="prefetch" href="/blog.github.io/assets/js/27.85314d56.js"><link rel="prefetch" href="/blog.github.io/assets/js/28.da643af3.js"><link rel="prefetch" href="/blog.github.io/assets/js/29.863b5a3d.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.5045f36e.js"><link rel="prefetch" href="/blog.github.io/assets/js/30.b187070b.js"><link rel="prefetch" href="/blog.github.io/assets/js/31.f2411ca3.js"><link rel="prefetch" href="/blog.github.io/assets/js/32.cf583eef.js"><link rel="prefetch" href="/blog.github.io/assets/js/33.a6c7ee11.js"><link rel="prefetch" href="/blog.github.io/assets/js/34.525f1fe9.js"><link rel="prefetch" href="/blog.github.io/assets/js/36.94425a98.js"><link rel="prefetch" href="/blog.github.io/assets/js/37.81a52c7a.js"><link rel="prefetch" href="/blog.github.io/assets/js/38.035109da.js"><link rel="prefetch" href="/blog.github.io/assets/js/39.5de03b27.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.9c05fb97.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.f58cad38.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.80304e82.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.a1080829.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.c69d194c.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.6691e078.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Web Worker</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/study/webworker.html#web-worker" class="sidebar-link">Web Worker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/study/webworker.html#特点" class="sidebar-link">特点</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/webworker.html#常见的用法" class="sidebar-link">常见的用法</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/webworker.html#web-worker分类" class="sidebar-link">web worker分类</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="web-worker"><a href="#web-worker" class="header-anchor">#</a> Web Worker</h2> <p>js是单线程的，而Web Worker就是为js创造了多线程的环境，主线程执行代码遇到new Worker，就创建了一个独立于主线程外的worker线程，两者互不干扰，woker线程执行完成再把结果通知主线程。</p> <h3 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h3> <ul><li>与主线程同源</li> <li>不能读取或者操作DOM</li> <li>不能读取本地文件</li> <li>也不能读取或者更改主线程的变量</li></ul> <p>简单的理解它就是独立于主线程外的一个单独的线程，浏览器为了安全考虑，限制其对主线程运行的网页代码环境进行操作，只能通过特定的通信机制传递消息给主线程，有点安全沙箱的意思。</p> <h3 id="常见的用法"><a href="#常见的用法" class="header-anchor">#</a> 常见的用法</h3> <p>先看下面的一个简单的例子</p> <div class="language- extra-class"><pre class="language-text"><code>worker线程给主线程发送消息
+&lt;script&gt;
+if (window.Worker) {
+    const myWorker = new Worker(&quot;myWorker.js&quot;);
+    myWorker.onmessage = function(e) {
+        console.log('收到了');
+    }
+    myWorker.terminate()
+} else {
+    console.log('Your browser doesn\'t support web workers.')
+}
+&lt;/script&gt;
+
+myWorker.js
+&lt;script&gt;
+ setTimeout(()=&gt;{
+       postMessage('发送');
+ },500);
+&lt;/script&gt;
+
+
+主线程也可以给worker线程发送消息
+&lt;script&gt;
+if (window.Worker) {
+    const myWorker = new Worker(&quot;myWorker.js&quot;);
+     myWorker.postMessage('发送'); 
+} else {
+    console.log('Your browser doesn\'t support web workers.')
+}
+&lt;/script&gt;
+
+myWorker.js
+&lt;script&gt;
+addEventListener('message', function (e) {  
+ 
+}, false);
+
+等价于
+
+this.addEventListener('message', function (e) {  
+ 
+}, false);
+等价于
+
+self.addEventListener('message', function (e) {  
+ 
+}, false);
+
+
+&lt;/script&gt;
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">注意</p> <p>web worker有自己的全局对象，不是主线程的window，所以worker没有alert confirm这些方法</p></div> <p>上面例子中用到了两个api，方法postMessage,terminate和事件onmessage。</p> <p><strong>主要的方法：</strong></p> <ul><li>postMessage
+字面意思发送消息</li> <li>terminate
+终止worker</li></ul> <p><strong>主要的事件：</strong></p> <ul><li>onmessage
+接收postMessage发送来的消息</li> <li>onmessageerror
+当messageerror 类型的事件发生时，对应的EventHandler 代码被调用</li></ul> <p><strong>Worker自身内部的属性方法事件：</strong></p> <ul><li>importScripts();
+加载脚本(该方法可加装多个脚本)：self.importScripts('script1.js', 'script2.js')</li> <li>close<br>
+worker内部关闭自身self.close()</li> <li>onmessage</li> <li>onmessageerror</li> <li>postMessage</li></ul> <h3 id="web-worker分类"><a href="#web-worker分类" class="header-anchor">#</a> web worker分类</h3> <p>web worker分为</p> <ul><li>DedicatedWorker(专用线程)</li> <li>SharedWorker(共享线程)</li></ul> <p>概念上简单的理解专用线程就是专为当前页面服务的线程，而共享线程则可以为多个页面共享的线程。<br></p> <p>表现上来看，专用线程一般就在本页面调用，推送也只能推送本页面，当前页面关闭，则线程结束。共享线程则可以同时推送多个页面信息，要调用它的多个页面都关闭，线程才会结束，其实你可以把他理解成单页面里面store的概念，多个组件共享这个状态。<br></p> <p>DedicatedWorker(专用线程)用法就是普通的web worker<br></p> <p><strong>SharedWorker(共享线程)</strong></p> <p>其实跟普通的web worker也只有些许的不同,只是它的事件方法都是在port对象上</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt;
+if (window.Worker) {
+    const myWorker = new SharedWorker(&quot;myWorker.js&quot;);
+    
+    myWorker.port.start()//onmessage事件或者start事件，这两种事件都可以启动一个SharedWorker
+    
+    myWorker.port.onmessage = function(e) {
+        console.log('收到了');
+    }
+    myWorker.port.terminate()
+} else {
+    console.log('Your browser doesn\'t support web workers.')
+}
+&lt;/script&gt;
+
+myWorker.js
+&lt;script&gt;
+addEventListener('onconnect ', function (e) {  
+  var port = e.ports[0];
+  port.postMessage('发送');
+  
+}, false);
+&lt;/script&gt;
+</code></pre></div><p>当然SharedWorker这个兼容性太差了，基本很多浏览器都不支持</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.3448b736.js" defer></script><script src="/blog.github.io/assets/js/2.08fb6a77.js" defer></script><script src="/blog.github.io/assets/js/35.76a6d4c4.js" defer></script>
+  </body>
+</html>

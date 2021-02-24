@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>iterator | RaoCy</title>
+    <meta name="description" content="欢迎来到RaoCy博客">
+    <link rel="icon" href="/blog.github.io/images/logo.png">
+    
+    <link rel="preload" href="/blog.github.io/assets/css/0.styles.59e117d8.css" as="style"><link rel="preload" href="/blog.github.io/assets/js/app.3448b736.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/2.08fb6a77.js" as="script"><link rel="preload" href="/blog.github.io/assets/js/30.b187070b.js" as="script"><link rel="prefetch" href="/blog.github.io/assets/js/10.d18d338d.js"><link rel="prefetch" href="/blog.github.io/assets/js/11.8e029bb3.js"><link rel="prefetch" href="/blog.github.io/assets/js/12.503871bf.js"><link rel="prefetch" href="/blog.github.io/assets/js/13.85cbfb3b.js"><link rel="prefetch" href="/blog.github.io/assets/js/14.612e31b7.js"><link rel="prefetch" href="/blog.github.io/assets/js/15.771fa0fa.js"><link rel="prefetch" href="/blog.github.io/assets/js/16.f0c9b1a8.js"><link rel="prefetch" href="/blog.github.io/assets/js/17.03cb6c75.js"><link rel="prefetch" href="/blog.github.io/assets/js/18.30e47f41.js"><link rel="prefetch" href="/blog.github.io/assets/js/19.743d9fe2.js"><link rel="prefetch" href="/blog.github.io/assets/js/20.f94a7f1f.js"><link rel="prefetch" href="/blog.github.io/assets/js/21.d75e11ba.js"><link rel="prefetch" href="/blog.github.io/assets/js/22.e93b0ec6.js"><link rel="prefetch" href="/blog.github.io/assets/js/23.aa7a8461.js"><link rel="prefetch" href="/blog.github.io/assets/js/24.625ac98a.js"><link rel="prefetch" href="/blog.github.io/assets/js/25.08111efc.js"><link rel="prefetch" href="/blog.github.io/assets/js/26.1156d385.js"><link rel="prefetch" href="/blog.github.io/assets/js/27.85314d56.js"><link rel="prefetch" href="/blog.github.io/assets/js/28.da643af3.js"><link rel="prefetch" href="/blog.github.io/assets/js/29.863b5a3d.js"><link rel="prefetch" href="/blog.github.io/assets/js/3.5045f36e.js"><link rel="prefetch" href="/blog.github.io/assets/js/31.f2411ca3.js"><link rel="prefetch" href="/blog.github.io/assets/js/32.cf583eef.js"><link rel="prefetch" href="/blog.github.io/assets/js/33.a6c7ee11.js"><link rel="prefetch" href="/blog.github.io/assets/js/34.525f1fe9.js"><link rel="prefetch" href="/blog.github.io/assets/js/35.76a6d4c4.js"><link rel="prefetch" href="/blog.github.io/assets/js/36.94425a98.js"><link rel="prefetch" href="/blog.github.io/assets/js/37.81a52c7a.js"><link rel="prefetch" href="/blog.github.io/assets/js/38.035109da.js"><link rel="prefetch" href="/blog.github.io/assets/js/39.5de03b27.js"><link rel="prefetch" href="/blog.github.io/assets/js/4.9c05fb97.js"><link rel="prefetch" href="/blog.github.io/assets/js/5.f58cad38.js"><link rel="prefetch" href="/blog.github.io/assets/js/6.80304e82.js"><link rel="prefetch" href="/blog.github.io/assets/js/7.a1080829.js"><link rel="prefetch" href="/blog.github.io/assets/js/8.c69d194c.js"><link rel="prefetch" href="/blog.github.io/assets/js/9.6691e078.js">
+    <link rel="stylesheet" href="/blog.github.io/assets/css/0.styles.59e117d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">RaoCy</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="浏览器的世界" class="dropdown-title"><span class="title">浏览器的世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserKey/" class="nav-link">浏览器内核</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browser/" class="nav-link">浏览器多线程多进程</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserOpen/" class="nav-link">浏览器同域名请求并发限制</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserDns/" class="nav-link">浏览器DNS域名解析</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/broeweSafe/" class="nav-link">浏览器的安全</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/browserCache/" class="nav-link">浏览器的缓存</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/webworker/" class="nav-link">Web Worker</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iframe/" class="nav-link">iframe</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/http/" class="nav-link">http协议</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/cookie/" class="nav-link">cookie</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端杂谈" class="dropdown-title"><span class="title">前端杂谈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/modules/" class="nav-link">前端开发模式</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/jsnull/" class="nav-link">null与undefined</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/eventLoop/" class="nav-link">宏任务和微任务</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/callback/" class="nav-link">js异步编程方案</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/iterable/" class="nav-link">iterator迭代器</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/closure/" class="nav-link">闭包</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/funcHigh/" class="nav-link">高阶函数</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/this/" class="nav-link">js中的this</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/class/" class="nav-link">js中的面向对象</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/event/" class="nav-link">js里的事件模型</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/diff/" class="nav-link">diff算法</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/study/module/" class="nav-link">前端模块化规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术杂玩" class="dropdown-title"><span class="title">前端技术杂玩</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog.github.io/react/index/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mongodb/api/" class="nav-link">mongodb</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/vuecli/index/" class="nav-link">vuecli</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/mxgraph/index/" class="nav-link">mxgraph</a></li><li class="dropdown-item"><!----> <a href="/blog.github.io/prerender-spa-plugin/index/" class="nav-link">prerender-spa-plugin</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>iterator</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog.github.io/study/iterable.html#iterator" class="sidebar-link">iterator</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog.github.io/study/iterable.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/iterable.html#iterator机制的集合" class="sidebar-link">iterator机制的集合</a></li><li class="sidebar-sub-header"><a href="/blog.github.io/study/iterable.html#迭代器方法" class="sidebar-link">迭代器方法</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="iterator"><a href="#iterator" class="header-anchor">#</a> iterator</h2> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>通过翻阅迭代器协议以及可迭代协议，我了解到，在js里面iterator其实是一个对象（废话，js里面哪个不是对象），定义了一个可迭代的序列，并且可以通过调用next()返回一个对象{value:&quot;&quot;,done:Boolean},当迭代到序列最后时，done为true。<br></p></div> <p>其实iterator我理解的是也是为了遍历，在没有iterator之前，遍历Array可以采取下标来循环，但是Map和Set这些你无法使用下标的怎么去遍历呢？于是es6引入了iterator机制，并且很多语言都有iterator的概念，js当然也不能落后，于是迭代器和与之对应的生成器被带入了js.<br></p> <p>所以有了iterator，就可以对集合进行标准化的遍历操作，不管是Array还是Map,Set都可以通过iterator这种机制来遍历.<br></p> <h3 id="iterator机制的集合"><a href="#iterator机制的集合" class="header-anchor">#</a> iterator机制的集合</h3> <p>js里面哪些数据结构已经内置了iterator机制呢
+Array、Map、Set、String、TypedArray、函数的 arguments 对象、NodeList 对象都具备 Iterator 接口等等<br></p> <p>比如Array,它的原型上有一个属性为Symbol(Symbol.iterator)，它就是迭代器函数，执行这个就会返回迭代器对象，迭代器对象就可以调用next()来玩了，
+其实就是某些集合对象，js想让它能标准化遍历，就给内置了iterator机制，但其实工作中我们遇见最多的是Array、Map、Set.<br></p> <p>那么没有内置的，我们也可以通过自己去写迭代器，或者直接用Generator去生成，生成器不就是干这个的嘛</p> <h3 id="迭代器方法"><a href="#迭代器方法" class="header-anchor">#</a> 迭代器方法</h3> <p>我们已经知道具有iterator的可以遍历，那么怎么遍历呢？这里介绍几个迭代器方法</p> <h4 id="_1-for-of"><a href="#_1-for-of" class="header-anchor">#</a> 1.for...of</h4> <p>首先es6随之而来提供了for...of这个api，这也是最基础的方法</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1,2,3];
+for(let num of arr){
+console.log(num);
+}
+// 1 2 3
+
+let set=new Set([1,2,3])
+for(let num of set){
+console.log(num);
+}
+// 1 2 3
+
+let map=new Map([[1,2],[3,4]])
+for(let num of map){
+console.log(num);
+}
+// [1,2]  [3,4]
+</code></pre></div><p>上面的代码执行的逻辑跟你理解的简单的for。。in循环机制大不一样<br></p> <ul><li>首先for-of会调用arr数组中我们前面提到的Symbol.iterator，就得到了arr的迭代器对象,</li> <li>然后会自动执行iterator.next()，返回对象的{value:&quot;&quot;,done:Boolean},其中value属性会被保存在num中</li> <li>直到迭代到序列最后时，done为true，循环结束。<br></li></ul> <p>----这里的循环也被叫做消耗迭代器<br></p> <p>所以它完全没有去追踪index下标索引，一个数据结构只要具有Symbol.iterator属性，就可以认为是“可遍历的”（iterable）。就可以使用上述默认会调用Iterator函数的API=&gt;for...of。<br></p> <h4 id="_2-foreach"><a href="#_2-foreach" class="header-anchor">#</a> 2.forEach</h4> <p>for..of虽然不错，但forEach更加简单，方便</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1,2,3];
+arr.forEach((e)=&gt;{
+console.log(e)
+})
+// 1 2 3
+
+let set=new Set([1,2,3])
+set.forEach((e)=&gt;{
+console.log(e)
+})
+// 1 2 3
+
+let map=new Map([[1,2],[3,4]])
+map.forEach((e)=&gt;{
+console.log(e)
+})
+// [1,2]  [3,4]
+
+</code></pre></div><p>当然还有es6还提供了其他更骚的方法，展开语法、yield*，和解构赋值等等来消耗迭代器</p> <h4 id="_3-扩展运算符-spread"><a href="#_3-扩展运算符-spread" class="header-anchor">#</a> 3.扩展运算符(spread)</h4> <div class="language- extra-class"><pre class="language-text"><code>let set=new Set([1,2,3])
+console.log(...set)
+// 1 2 3
+
+</code></pre></div><h4 id="_4-解构赋值"><a href="#_4-解构赋值" class="header-anchor">#</a> 4.解构赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let [a,b,c,d,e]=arr;
+console.log(b) //2
+</code></pre></div><h4 id="_5-es6的array-map-set还内置了方法，调用后也可返回迭代器对象"><a href="#_5-es6的array-map-set还内置了方法，调用后也可返回迭代器对象" class="header-anchor">#</a> 5.es6的Array,Map,Set还内置了方法，调用后也可返回迭代器对象</h4> <ul><li>entries() 返回的是{value:[key(键),value(值)],done:Boolean}</li> <li>key()  返回的是{value:key(键),done:Boolean}</li> <li>values() 返回的是{value:value(值),done:Boolean}</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Array
+let arr = [1, 2, 3, 4, 5];
+let it=arr.entries()
+console.log(it.next())  //{value:[0,1],done:false}
+let itKey=arr.key()
+console.log(itKey.next()) //{value:0,done:false}
+let itVal=arr.values()
+console.log(itVal.next())  //{value:1,done:false}
+
+Set
+let arr=new Set([1,2,3,4,5])
+conosle.log(arr.next()) //{value:[1,1],done:false}  Set跟数组不一样，键与值相同
+let arrKey=arr.key()
+console.log(arrKey.next()) //{value:1,done:false}
+let arrVal=arr.values()
+console.log(arrVal.next()) //{value:1,done:false}
+
+Map
+let map=new Map([[1,2],[3,4]])
+let it=map.entries()
+console.log(it.next()) //{value:[1,2],done:false}  Map例如这里[1,2]，本身就表示[key,value]的含义
+let itKey=map.key()
+console.log(itKey.next()) //{value:1,done:false}
+let itVal=map.values()
+console.log(itVal.next()) //{value:2,done:false}
+</code></pre></div><h4 id="对象为什么没有内置迭代器机制"><a href="#对象为什么没有内置迭代器机制" class="header-anchor">#</a> 对象为什么没有内置迭代器机制</h4> <p>我们知道js主要表示集合的数据结构有Array,Object es6新增加了Set Map<br>
+为什么Array,Set,Map都内置了迭代器机制，而Object没有内置呢，去控制台打印也可以发现，Object没有[Symbol.iterator]属性<br>
+我理解的原因是Object的遍历，你要考虑到遍历自身的属性还是遍历对象自身原型链的属性等等，考虑的会比较复杂，加上现在遍历对象的方式其实已经有很多方法了<br></p> <p>那么我们偏要给一个对象整一个迭代器，最简单的就是生成器了，自己去生成迭代器<br></p> <div class="language- extra-class"><pre class="language-text"><code>var it = {};
+it[Symbol.iterator] = function* () {
+yield 1;
+yield 2;
+yield 3;
+};
+//可以被...遍历，说明已经部署成功
+console.log([...it])// [1, 2, 3]
+let myIterator = it[Symbol.iterator]()
+console.log(myIterator.next())//{value: 1, done: false}
+console.log(myIterator.next())//{value: 2, done: false}
+console.log(myIterator.next())//{ value: 3, done: false }
+console.log(myIterator.next())//{ value: undefined, done: true }
+
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>这里只是简单的理解一下iterator的概念，本文中顺便提到的一些es6提供的一些新的方法以后有机会再说</p></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog.github.io/assets/js/app.3448b736.js" defer></script><script src="/blog.github.io/assets/js/2.08fb6a77.js" defer></script><script src="/blog.github.io/assets/js/30.b187070b.js" defer></script>
+  </body>
+</html>
