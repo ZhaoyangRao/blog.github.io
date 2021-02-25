@@ -294,6 +294,7 @@ const ajax1 = () => {
     let res1=await ajax1();
     let res2=await ajax2();
     let res3=await ajax3();
+    return res3;
   }
 
   runAll().then(()=>{})
@@ -301,11 +302,12 @@ const ajax1 = () => {
 ```
 从上面的代码可以看出来，async确实跟Generator很像，但也有区别<br>
 + 将\*转为async，并且至于function最前
-+ 将yield转为awiat，并且不再return
-+ await后返回的是Promise对象，需要.then获取拿出，而Generator的return出具体的结果
++ Generator需要next执行，async自执行
++ async 函数的返回值是Promise对象（会自动转为立即resovle的promise对象）， Generator 函数的返回值是 Iterator 对象
 
 :::tip 总结
 前端的技术更新迭代是很多的，处理异步的方式可能也不止现在这几种，加上各大浏览器对新的属性以及方法的兼容性问题，在工作中使用哪种自然有多方的考虑，祝我们以后都能更快乐的阅读历史代码吧。
+
 JS 异步编程进化史：callback -> promise -> generator -> async + await
 :::
 
