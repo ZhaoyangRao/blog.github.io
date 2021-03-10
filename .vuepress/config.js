@@ -59,7 +59,7 @@ module.exports = {
                        ]
             },
             {
-                text: '前端杂谈',
+                text: '前端知识点',
                 items: [
                     {
                         text: '前端开发模式',
@@ -114,9 +114,14 @@ module.exports = {
                     {
                         text: '前端模块化规范',
                         link: '/study/module/'
+                    },
+                    {
+                        text: 'webpack',
+                        link: '/study/webpack/'
                     }
                 ],
-            }, {
+            }, 
+            {
                 text: '前端技术杂玩',
                 items: [
                     {
